@@ -1,0 +1,77 @@
+SYLLABUS FOR MATH 416, Spring 2024
+(As of February 10, 2025)
+Tuesday, Thursday 9:30 a.m. - 10:45 a.m.
+PHY 2211
+Prerequisites: MATH 240 (or equivalent), MATLAB.
+Text: Instructor’s notes
+Instructor: Dr. Wojciech Czaja
+Oﬃce Hours: Tuesday, Thursday 11:00 - 12:00 p.m., or by appointment
+Email: czaja (at) umd (dot) edu
+Exams: There will be 3 midterm exams during the semester, each for the total of
+100 points. The lowest score is dropped. They are tentatively scheduled on February
+27, April 3, and May 1. The ﬁnal exam is worth 200 points. The ﬁnal exam is on
+May 19 (Monday), 2025, at 1:30 p.m. - 3:30 p.m.
+Calculators: Calculators (and other electronic devices) will NOT be allowed for the
+exams, but small (5 x 3 in.) note cards will be allowed during the midterm exams.
+It is the policy of the Department of Mathematics not to allow note cards on ﬁnal
+exams.
+Homework: On Thursday of the week that has no exam scheduled, homework will
+be assigned. (Homeworks are due the next Thursday at the start of the class.) Each
+one is worth 25 points, and there will 10 such assignments. The lowest 2 scores
+(including absences) are dropped. Late homework will not be accepted.
+Grading: The maximum point total is 600 points and the total used to calculate the
+ﬁnal grade is the minimum of the two numbers: 600 points and the largest score in
+the class. The setting of letter grades will be based on the number of points and will
+be no worse than: 50% - D-, 60% - C-, 75% - B-, 90% - A-. Cutoﬀs for plus/minus
+grades will be determined at the end of semester.
+Academic integrity: The University makes me remind you about its academic
+integrity policies. So I do. Nobody, however, has to remind me that part of my job
+is to make sure that these policies are obeyed.
+Attendance and absences: You are responsible for the material covered in class,
+whether you attend or not. You are also responsible for the announcements made
+during class; they may include changes in the syllabus .
+The instructor will adhere strictly to the oﬃcial university policy on makeup ex-
+ams. In particular, it is the policy of the University to excuse the absences of students
+that result from the following causes: illness of the student, or illness of an immediate
+family member; religious observance (where the nature of the observance prevents the
+student from being present during the class period); participation in university ac-
+tivities at the request of University authorities; and compelling circumstance beyond
+12
+the student’s control. Students claiming excused absence must apply in writing and
+furnish documentary support for their assertion that absence resulted from one of
+these causes. Moreover, foreseeable absences (such as those resulting from religious
+holidays or participation in university-sponsored events) must be submitted in writ-
+ing to the instructor by February 10, 2025. See the UMD’s Course Related Policy
+website for more details.
+Due to a University requirement for timely assessment, make ups for excused major
+grading events must be scheduled within the ﬁrst 3 class days of the student returning
+to campus, and at a time that is convenient for both parties.
+Disabilities: If you have a disability disallowing you to test under the usual time or
+in-class conditions, or if you need some other accommodations, you may contact the
+oﬃce of Accessibility and Disability Service (ADS). Please let me know by February
+10, 2025, if you think you may require these services. If they assess you as meriting
+private conditions and/or extra time, then you may arrange to take your tests at
+ADS, with extra time as they indicate. You must arrange this well in advance of a
+test. Remember: I need to sign the document.
+Emergency closures: In case of an emergency that closes the University for an
+extended period of time (for example, due to a pandemic), be sure to access your
+email for instructions from me. Should any classes or exams be cancelled, please
+check the class schedule page for updated schedule information.
+Course communications: Will be done via UMD email. Please make sure you
+have updated yours on ELMS.
+Course evaluations: Your participation in the evaluation of courses through Course-
+EvalUM is important to us, and helps improve teaching and learning at the University.
+CourseEvalUM will be open for you to complete your evaluations for the Fall semester.
+Evaluations are anonymous and will not be available to faculty until next semester,
+so they cannot possibly aﬀect your grade.
+OUTLINE OF MATERIAL
+This course introduces students to the mathematical concepts arising in signal
+analysis from the applied harmonic analysis point of view. Topics include applied
+linear algebra, Fourier series, discrete Fourier transform, Fourier transform, Shannon
+Sampling Theorem, ﬁltering transforms, wavelet bases, multiresolution analysis, and
+discrete wavelet transform.
+Complex Numbers, Vector Spaces and Linear Transformations [1 week]
+Finite frames and bases, Principal Components, Laplacian Eigenmaps [4 weeks]
+Fourier Series, Discrete Fourier Transform [4 weeks]
+Wavelet Bases, Discrete Wavelet Transform, [4 weeks]
+Sampling, Quantization, Precision [2 weeks]
