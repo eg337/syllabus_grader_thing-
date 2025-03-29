@@ -2,7 +2,10 @@ from pypdf import PdfReader
 from google import genai
 from docx import Document
 from bs4 import BeautifulSoup
-API_KEY = ""
+
+with open("key.txt") as f:
+    for line in f:
+        API_KEY = line.strip()
 
 # name = 'CMSC470-Syllabus.pdf'
 # name = "syllabus_416_25.pdf"
