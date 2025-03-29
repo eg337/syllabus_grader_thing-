@@ -2,6 +2,7 @@ from pypdf import PdfReader
 from google import genai
 from docx import Document
 from bs4 import BeautifulSoup
+import json
 
 with open("key.txt") as f:
     for line in f:
@@ -38,8 +39,18 @@ client = genai.Client(api_key=API_KEY)
 
 response = client.models.generate_content(
     model="gemini-2.0-flash", contents="In the message text after, I will upload a syllabus to a college course. After I do so, please output the grade weights as percentages"
-    + " followed by a percent sign contained inside in a json format also include drops as a separate directory with only the number in the value: " + texts 
+    + " followed by a percent sign contained inside in a json format also include drops as a separate directory with only the number in the value " + texts 
 )
 
 
-print(response.text)
+#print(response.text)
+
+string_data = response.text.strip("`")[4:]
+
+
+try:
+    json_object = json.loads(string_data)
+    print(json_object)
+    print(type(json_object)) 
+except json.JSONDecodeError as e:
+    print(f"Error decoding JSON: {e}")
