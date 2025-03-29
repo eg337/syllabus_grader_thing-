@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Advanced Data Structures and Algorithms</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../markdown.css" />
+</head>
+<body>
+<h1 id="advanced-data-structures-and-algorithms">Advanced Data
+Structures and Algorithms</h1>
+<p><a href="../readme.html">Back to main page</a></p>
+<h2 id="syllabus"><a name="syllabus"></a>Syllabus</h2>
+<p>The syllabus for the course can be found <a
+href="./syllabus.pdf">here</a>. Most (but not all) of that information
+is summarized here.</p>
+<h2 id="lectures-and-attendance-policy"><a name="lectures"></a>Lectures
+and Attendance Policy</h2>
+<p><strong>Lectures</strong> will be held in-person in the classroom
+listed on the University Registrar. Lectures will be recorded for the
+convenience of those who cannot intend or prefer not to for any
+reason.</p>
+<p>The <strong>class schedule</strong> depends on the day of the week.
+On Mondays and Wednesdays, we will have a traditional lecture in which
+material is presented to you by the instructor. On Fridays, we will do
+one of three things: Take an in-person quiz (2 total), work together on
+a homework assignment (6 total), or cancel class.</p>
+<p><strong>Class attendance is mandatory</strong>. Every lecture, I will
+have a computer program randomly select 20 names from the roster. If
+your name is chosen and you are not present on class for any reason,
+then your participation score will drop by 2 percentage points (you will
+lose 2 of the 12 percent participation grade). I have a good reason for
+instituting this policy, which will be justified to you in person during
+the first class period.</p>
+<p>Our classroom is a <strong>no technology zone</strong> (except for
+the projector used for the slides) during traditional lectures (Mondays
+and Wednesdays). The purpose of this policy is to ensure students are
+present and paying attention to the lecture consistently. If you use
+technology during lecture, then I will consider you absent and deduct
+from your participation score. I will also justify this policy to you
+verbally during the first class period. On <strong>Fridays, you will use
+your laptops to work on homework assignments collaboratively with
+others</strong>.</p>
+<h2 id="textbook"><a name="textbook"></a>Textbook</h2>
+<p>We’ll post readings from the following two sources (one is a
+textbook, the other a curated website of algorithms concepts). We urge
+you to read them or get that info from another source.</p>
+<p><em>Introduction to Algorithms</em> by Cormen, et. al., 3rd edition.
+Referred to as “CLRS”. UVA Library has a digital version of CLRS
+available <a
+href="https://search.lib.virginia.edu/catalog/u6757775">online for
+free</a> * CP-Algorithms. A curated website of algorithm ideas for
+competitive programming (https://cp-algorithms.com)</p>
+<h2 id="topics"><a name="homeworks"></a>Topics</h2>
+<p>The course covers the following topics:</p>
+<ul>
+<li><strong>Fenwick Trees</strong>: An advanced array that allows for
+fast range queries</li>
+<li><strong>Segment Trees</strong>: An advanced tree that allows for
+fast range queries and updates</li>
+<li><strong>Linear Programming:</strong> A general advanced approach to
+solving many optimization problems</li>
+<li><strong>Computational Geometry:</strong> Some basic algorithms
+involving space, shapes, intersections, etc.</li>
+<li><strong>Van Emde Boas Trees:</strong> A neat optimization on search
+trees that are very fast</li>
+<li><strong>Approximation Algorithms:</strong> Approaches for when you
+can’t find the optimal solution fast</li>
+</ul>
+<h2 id="homeworks"><a name="homeworks"></a>Homeworks</h2>
+<p>There will be <strong>six programming challenges</strong> that we
+will give for homework. Each assignment should be done individually, but
+high-level discussion is allowed. Each assignment will consist of a
+problem statement and sample input/output. Gradescope will be available
+for submissions and assignments will be autograded. The general flow for
+homework assignements is:</p>
+<ul>
+<li><strong>Friday before due date:</strong> The assignment will be
+released in lecture. We will discuss it briefly and everybody will work
+on it during class. I will walk around and help everyone get intuition
+on how to approach the problem and some of the tricks that needs to be
+overcome. During this class period you may collaborate with your
+neighbors and peers.</li>
+<li><strong>Following Wednesday:</strong> The assignment is due on
+gradescope by midnight.</li>
+<li><strong>Monday after that:</strong> Everybody gets an automatic
+extension to the following Monday evening. This is NOT intended to be
+used unless you absolutely need it. NO extensions will be given beyond
+this for ANY REASON.</li>
+</ul>
+<h2 id="quizzes"><a name="lectures"></a>Quizzes</h2>
+<p>There will be two quizzes given throughout the term. Please reference
+the course schedule for details on the dates and content of each quiz.
+Each quiz will be short and is meant to quickly test your basic
+understanding of the concepts from class. These will be held in-person,
+in-class, on specific <strong>Fridays</strong> throughout the term. The
+schedule can be referenced to see which Friday class periods have
+quizzes scheduled.</p>
+<h2 id="final-project"><a name="final"></a>Final Project</h2>
+<p>There is <strong>NO final exam</strong> for this class. Instead,
+there is a <strong>final project</strong>. Each student will join a
+group of other students (3-4 per group) and be given an
+<strong>algorithm</strong> to study on their own. The group will need to
+do the following for their algorithm:</p>
+<ul>
+<li><strong>Learn it:</strong> Study and understand the algorithm you
+were assigned / chosen.</li>
+<li><strong>Apply it:</strong> Design a homework assignment that
+requires some application of the algorithm you studied.</li>
+<li><strong>Solve it:</strong> Write the solution to your homework
+assignment, along with test cases that test the solution.</li>
+<li><strong>Teach it:</strong> Create a slide-deck that teaches this
+algorithm to the class and present it to everybody in lecture.</li>
+</ul>
+<p>More details on this project will be provided once it is
+available.</p>
+<h2 id="grading"><a name="lettergrades"></a>Grading</h2>
+<p>This course will use a <strong>standard weighted-average grading
+system</strong>. The grade breakdown is shown below:</p>
+<ul>
+<li><strong>Homework (40 percent)</strong>: There will be six
+programming challenges which account in total for 30 percent of the
+final grade.</li>
+<li><strong>Quizzes (30 percent)</strong>: There will be two in-class
+quizzes which account for 30 percent of the final grade.</li>
+<li><strong>Attendance (12 percent)</strong>: Attendance and
+participation are required in this course. Every lecture, a random
+subset of students will be chosen by a computer program for attendance.
+If your name is chosen and you are not present, you will lose 2 of these
+12 percentage points.</li>
+<li><strong>Final Project (18 percent)</strong>: There will be a final
+project in which groups of students study, implement, prepare, and
+present one advanced algorithm of their choosing. Details will be
+available on the course website.</li>
+</ul>
+</body>
+</html>
