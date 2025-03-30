@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useRef } from 'react';
 import axios from 'axios';
+import React from 'react';
 
 function App() {
   return (
@@ -126,6 +127,34 @@ function OutputSection() {
       <p>
         Also featuring simplified grade calculation :)
       </p>
+      <Download/>
+    </div>
+  );
+}
+
+function Download() {
+  const handleDownload = async () => {
+    try {
+      // Make a GET request to the Django backend to get the .xlsx file
+      const response = await axios.get('http://127.0.0.1:8000/api/create-grade-calc/', {
+        responseType: 'blob', // Important to receive the file as a Blob
+      });
+
+      // Create a link element
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(new Blob([response.data]));
+      link.download = 'Data.xlsx'; 
+
+      // Trigger the download by programmatically clicking the link
+      link.click();
+    } catch (error) {
+      console.error('Error downloading the file:', error);
+    }
+  };
+
+  return (
+    <div>
+      <button onClick={handleDownload}>Download Excel File</button>
     </div>
   );
 }
