@@ -130,3 +130,23 @@ p {
   margin-top: 5%;
   margin-left: 37%;
 }
+
+.download-button {
+  font-family: "Jersey 20", sans-serif;
+  font-size: 24px;
+  background-color: #638F54;
+  color: var(--custom-tan);
+  padding: 10px 10px;
+  width: 50%;
+  border-radius: 8%;
+  margin-top: 5%;
+}
+
+.download-text {
+  color: #638F54;
+  margin-bottom: 1%;
+}
+
+input {
+  display: none;
+}
