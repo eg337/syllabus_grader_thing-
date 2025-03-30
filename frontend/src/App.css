@@ -1,38 +1,132 @@
+:root {
+  --custom-tan: #f8f7ed;
+  --custom-blue: #07305E;
+  --custom-red: #660C16;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, html {
+  background-color: var(--custom-tan);
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  background-color: var(--custom-blue);
+  top: 0;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;     
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-text {
+  color: var(--custom-blue);
+  font-family: "Jersey 20", sans-serif;
+  font-size: 48px;
+}
+
+#title {
+  color: var(--custom-tan);
+  font-size: 96px;
+  text-align: center;
+  position: absolute;  /* This is necessary for the `top` property to work */
+  margin-bottom: 50px; /* Optional, adds spacing below */
+}
+
+/*input section styling*/
+
+.dropbox {
+  background-color: #F1E0D3;
+  border-style: dashed;
+  border-color: var(--custom-red);
+  cursor: pointer;
+  height: 80%;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;     
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.dropbox-content {
+  display: flex;
+  align-items: center;     
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* .dropbox:hover {
+  color: smth different idk
+} */
+
+.dropbox-text {
+  color: var(--custom-red);
+  margin-left: 0px;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+}
+
+.subtext {
+  color: #806266;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+p {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--custom-blue);
+  font-size: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: calc(100vh - 20vh);
+}
+
+.column {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-basis: 100%;
+  flex: 1;
+  margin: 3%;
 }
 
-.App-link {
-  color: #61dafb;
+#column-left {
+  flex: 1.75;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#column-internal-left {
+  margin-left: 0%;
+  margin-top: 2%;
+}
+
+#upload-icon {
+  fill: var(--custom-red);
+  height: 10vh; 
+  width: auto;
+  position: center;
+  display: block;
+}
+
+.submit {
+  font-family: "Jersey 20", sans-serif;
+  font-size: 24px;
+  background-color: var(--custom-red);
+  color: var(--custom-tan);
+  padding: 10px 10px;
+  width: 25%;
+  border-radius: 8%;
+  margin-top: 5%;
+  margin-left: 37%;
 }
