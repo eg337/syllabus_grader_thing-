@@ -1,5 +1,5 @@
 from openpyxl import Workbook
-
+from tempfile import NamedTemporaryFile
 
 def write_calc(grade_dict, deadline_dict):
     COLS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -46,7 +46,12 @@ def write_calc(grade_dict, deadline_dict):
         
     
 
-    workbook.save('example.xlsx')
+    with NamedTemporaryFile() as tmp:
+            workbook.save(tmp.name)
+            tmp.seek(0)
+            stream = tmp.read()
+        
+    return stream
 
 
 write_calc(0)

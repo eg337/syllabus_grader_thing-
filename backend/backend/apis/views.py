@@ -13,6 +13,8 @@ from rest_framework import status
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from grade_weight import generate_weights
+from deadline_gen import parse_schedule
+from write_xlsx import write_calc
 import sys
 import json
 import subprocess
@@ -50,6 +52,8 @@ class Create_Grade_Calc_View(APIView):
                 print(request.FILES[key].content_type)
 
             weights = generate_weights(input_file, filename)
-        
+            deadline = parse_schedule(weights, input_file, filename)
+            xlsx = write_calc(weights, deadline)
 
+            return JsonResponse
         return JsonResponse({'error': 'Only POST requests are allowed'}, status=405)
