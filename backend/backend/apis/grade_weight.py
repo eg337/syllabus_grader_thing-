@@ -38,9 +38,10 @@ def generate_weights(file, name):
 
     client = genai.Client(api_key=API_KEY)
 
+    
     response = client.models.generate_content(
         model="gemini-2.0-flash", contents="In the message text after, I will upload a syllabus to a college course. After I do so, please output the grade weights as percentages"
-        + " followed by a percent sign contained inside in a json format also include drops as a separate directory with only the number in the value: " + texts 
+        + " followed by a percent sign contained inside in a json file, format with each assignment as a key with the value being a subdictionary, inside list the weight, the number of assignments of the given type, and the number of drops defaulting to 0 drops if none are listed" + texts 
     )
 
     string_data = response.text.strip("`")[4:]

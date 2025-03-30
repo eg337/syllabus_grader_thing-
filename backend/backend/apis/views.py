@@ -50,6 +50,6 @@ class Create_Grade_Calc_View(APIView):
                 print(request.FILES[key].content_type)
 
             weights = generate_weights(input_file, filename)
-            x
+        
 
         return JsonResponse({'error': 'Only POST requests are allowed'}, status=405)

@@ -10,8 +10,8 @@ with open("key.txt") as f:
 
 # name = 'CMSC470-Syllabus.pdf'
 # name = "syllabus_416_25.pdf"
-name = "3220 SP25 Syllabus_UpdatedJan23.docx"
-# name = "Advanced Data Structures and Algorithms.html"
+# name = "3220 SP25 Syllabus_UpdatedJan23.docx"
+name = "Advanced Data Structures and Algorithms.html"
 texts = ""
 
 extension = name.split(".")[1]
@@ -39,7 +39,8 @@ client = genai.Client(api_key=API_KEY)
 
 response = client.models.generate_content(
     model="gemini-2.0-flash", contents="In the message text after, I will upload a syllabus to a college course. After I do so, please output the grade weights as percentages"
-    + " followed by a percent sign contained inside in a json format also include drops as a separate directory with only the number in the value " + texts 
+    + " followed by a percent sign contained inside in a json file, format with each assignment as a key with the value being a subdictionary, inside list the weight, the number of assignments of the given type,"
+    + "and the number of drops defaulting to 0 drops if none are listed; Additionally in a separate key value pair, with key 'course title' list the title of the course" + texts 
 )
 
 
@@ -54,3 +55,4 @@ try:
     print(type(json_object)) 
 except json.JSONDecodeError as e:
     print(f"Error decoding JSON: {e}")
+
