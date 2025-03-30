@@ -9,7 +9,7 @@ def generate_weights(file, name):
     with open("key.txt", 'r') as f:
         for line in f:
             API_KEY = line.strip()
-        
+
    
     
 
@@ -49,7 +49,7 @@ def generate_weights(file, name):
     )
 
     string_data = response.text.strip("`")[4:]
-    print(string_data)
+    # print(string_data)
     while string_data[-1] != "}":
         string_data = string_data[:-1]
     try:

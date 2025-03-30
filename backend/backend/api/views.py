@@ -46,21 +46,21 @@ class Create_Grade_Calc_View(APIView):
         if not self.request.session.exists(self.request.session.session_key):
             self.request.session.create()
 
-        print("Init serial")
+        # print("Init serial")
         serializer = self.serializer_class(data = request.data)
-        print("End init serial")
+        # print("End init serial")
         deadline = {}
         if serializer.is_valid():
             #input_data = request.data.get('input_data')
             input_file = request.FILES.get('input_file')
             count = 0
             for key in request.FILES:
-                print("CHECKALLCAPS" + str(count) + "\n")
-                print(str(key) + "\n")
+                # print("CHECKALLCAPS" + str(count) + "\n")
+                # print(str(key) + "\n")
                 filename = request.FILES[key]._get_name()
-                print(filename)
+                # print(filename)
                 input_file = request.FILES[key].file
-                print(request.FILES[key].content_type)
+                # print(request.FILES[key].content_type)
                 if count == 0:
                     weights = generate_weights(input_file
                                        , filename)

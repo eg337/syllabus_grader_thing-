@@ -4,22 +4,22 @@ from django.http import HttpResponse
 
 def write_calc(grade_dict, deadline_dict, title):
     
-    count_var = 0
-    for key in grade_dict:
-        print(str(count_var)+": "+str(key) + "\n")
-        if key in deadline_dict:
-            print("YEP")
-        count_var += 1
+    # count_var = 0
+    # for key in grade_dict:
+    #     # print(str(count_var)+": "+str(key) + "\n")
+    #     # if key in deadline_dict:
+    #     #     print("YEP")
+    #     count_var += 1
 
 
     for key in grade_dict:
-        print(str(key) + "\n")
+        # print(str(key) + "\n")
         if grade_dict[key]['number'] == 0 or grade_dict[key]['number'] is None:
             grade_dict[key]['number'] = 1
         if key not in deadline_dict or len(deadline_dict[key]) == 0:
-            print("CHECK KEY\n")
-            print(key)
-            print("\n")
+            # print("CHECK KEY\n")
+            # print(key)
+            # print("\n")
             deadline_dict[key] = []
             for i in range(grade_dict[key]['number']):
                 deadline_dict[key].append(dict())
@@ -52,8 +52,8 @@ def write_calc(grade_dict, deadline_dict, title):
     worksheet['H1'] = "Course"
     worksheet['I1'] = "Grade"
 
-    print(deadline_dict)
-    print(grade_dict)
+    # print(deadline_dict)
+    # print(grade_dict)
     # grade_dict = grade_dict['grade weights']
     deadline = "PLACEHOLDER"
     for cat in grade_dict:
@@ -67,22 +67,22 @@ def write_calc(grade_dict, deadline_dict, title):
         
             percentage = float(percentage)
             each = percentage/grade_dict[cat]['number']
-            print(str(type(percentage) ) + "\n")
-            print(str(type(grade_dict[cat]['number'])))
+            # print(str(type(percentage) ) + "\n")
+            # print(str(type(grade_dict[cat]['number'])))
         else:
             each = grade_dict[cat]['weight']/grade_dict[cat]['number']
         
-        print(cat)
-        print(deadline_dict[cat])
-        print("CHECK2")
-        print(grade_dict[cat]['number'])
-        print("CHECK3")
+        # print(cat)
+        # print(deadline_dict[cat])
+        # print("CHECK2")
+        # print(grade_dict[cat]['number'])
+        # print("CHECK3")
         for i in range(grade_dict[cat]['number']):
             worksheet['A' + str(row)] = title
             worksheet['B' + str(row)] = cat + " " + str(i)
             # print(deadline_dict[cat])
-            print(i)
-            print("len: " + str(len(deadline_dict[cat])))
+            # print(i)
+            # print("len: " + str(len(deadline_dict[cat])))
             worksheet['C' + str(row)] = deadline_dict[cat][i]['deadline']
             worksheet['D' + str(row)] = cat
             worksheet['E' + str(row)] = each
@@ -96,7 +96,7 @@ def write_calc(grade_dict, deadline_dict, title):
 
     new_row = 2
     while worksheet["H"+str(new_row)].value is not None:
-        print(worksheet["H"+str(new_row)])
+        # print(worksheet["H"+str(new_row)])
         new_row += 1
 
     worksheet["H" + str(new_row)] = title

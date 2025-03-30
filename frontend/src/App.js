@@ -60,11 +60,17 @@ function InputSection() {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
+        responseType: 'blob',
       });
-      setResponseMessage(response.data.message); // Message from the backend
+      // setResponseMessage(response.data.message); // Message from the backend
       console.log("check");
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(new Blob([response.data]));
+      link.download = 'Data.xlsx'; 
+
+      link.click();
     } catch (error) {
-      setResponseMessage("Error uploading files.");
+      console.error('Error downloading the file:', error);
     }
   };
 
