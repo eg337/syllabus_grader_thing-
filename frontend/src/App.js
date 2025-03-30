@@ -102,7 +102,7 @@ function FileDropbox({ files, handleFileChange }) {
         </svg>
         <p className="dropbox-text">Drag and drop or click to browse files</p>
         <p className="subtext">Supported file types: .pdf, .docx, .html</p>
-        <input type="file" ref={uploadRef} onChange={handleFileChange} />
+        <input type="file" multiple ref={uploadRef} onChange={handleFileChange} />
       </div>
     </div>
   );
