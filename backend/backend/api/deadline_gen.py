@@ -5,17 +5,18 @@ from bs4 import BeautifulSoup
 import json
 from lxml import etree
 
-def parse_schedule(grades, name, file):
+def parse_schedule(grades, file, name):
     with open("key.txt") as f:
         for line in f:
             API_KEY = line.strip()
+    
 
     # name = 'CMSC470-Syllabus.pdf'
     # name = "syllabus_416_25.pdf"
     # name = "3220 SP25 Syllabus_UpdatedJan23.docx"
     # name = "Advanced Data Structures and Algorithms.html"
     # name = "STAT400-Syllabus.pdf"
-    name = "Adv. Algo. - Spring 2025 - Main - Google Drive.html"
+    # name = "Adv. Algo. - Spring 2025 - Main - Google Drive.html"
     texts = ""
     tables = ""
     data = ""
@@ -53,6 +54,7 @@ def parse_schedule(grades, name, file):
             # print(data)
             # print("CHECK2")
     elif extension == "html":
+        print(file)
         html_content = file.read()
         
         soup = BeautifulSoup(html_content, "html.parser")
@@ -85,6 +87,8 @@ def parse_schedule(grades, name, file):
     string_data = response.text.strip("`")[4:]
 
     print(string_data)
+    while string_data[-1] != "}":
+        string_data = string_data[:-1]
     try:
         json_object = json.loads(string_data)
         return json_object

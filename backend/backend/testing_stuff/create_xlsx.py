@@ -31,9 +31,11 @@ def write_calc(grade_dict, deadline_dict):
     for cat in grade_dict:
         percentage = ""
         count = 0
-        while grade_dict[cat]['weight'][count].isnumeric() or grade_dict[cat]['weight'][count].isnumeric() == ".":
-            percentage.append(grade_dict[cat]['weight'][count])
-            count += 1
+        if type(grade_dict[cat]['weight']) == type(""):
+            print
+            while grade_dict[cat]['weight'][count].isnumeric() or grade_dict[cat]['weight'][count].isnumeric() == ".":
+                percentage.append(grade_dict[cat]['weight'][count])
+                count += 1
         
         percentage = float(percentage)
         each = percentage/grade_dict[cat]['number']
