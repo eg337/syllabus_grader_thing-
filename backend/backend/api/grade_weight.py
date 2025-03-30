@@ -9,7 +9,7 @@ def generate_weights(file, name):
     with open("key.txt", 'r') as f:
         for line in f:
             API_KEY = line.strip()
-        
+
    
     
 

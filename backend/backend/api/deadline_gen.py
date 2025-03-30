@@ -9,7 +9,7 @@ def parse_schedule(grades, file, name):
     with open("key.txt") as f:
         for line in f:
             API_KEY = line.strip()
-   
+    
    
 
     # name = 'CMSC470-Syllabus.pdf'
