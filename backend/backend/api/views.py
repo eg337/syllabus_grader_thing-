@@ -34,6 +34,10 @@ def index(request):
 
     return JsonResponse(data)
 
+# class Upload_View(APIView):
+#     serializer_class = Grade_Calc_Serializer
+    
+
 
 class Create_Grade_Calc_View(APIView):
     serializer_class = Grade_Calc_Serializer
@@ -42,10 +46,13 @@ class Create_Grade_Calc_View(APIView):
         if not self.request.session.exists(self.request.session.session_key):
             self.request.session.create()
 
+        print("Init serial")
         serializer = self.serializer_class(data = request.data)
+        print("End init serial")
+        deadline = {}
         if serializer.is_valid():
             #input_data = request.data.get('input_data')
-            input_file = request.FILES.get('input_file1')
+            input_file = request.FILES.get('input_file')
             count = 0
             for key in request.FILES:
                 print("CHECKALLCAPS" + str(count) + "\n")
@@ -54,10 +61,16 @@ class Create_Grade_Calc_View(APIView):
                 print(filename)
                 input_file = request.FILES[key].file
                 print(request.FILES[key].content_type)
-                count += 1
-            weights = generate_weights(input_file
+                if count == 0:
+                    weights = generate_weights(input_file
                                        , filename)
-            deadline = parse_schedule(weights["grade weights"], input_file, filename)
+                elif count == 1:
+                    deadline = parse_schedule(weights["grade weights"], input_file, filename)
+                count += 1
+            # weights = generate_weights(input_file
+            #                            , filename)
+            if len(deadline) <1:
+                deadline = parse_schedule(weights["grade weights"], input_file, filename)
             return write_calc(weights["grade weights"], deadline, weights["course title"])
 
             # xlsx = write_calc(weights, deadline)

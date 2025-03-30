@@ -89,9 +89,26 @@ def write_calc(grade_dict, deadline_dict, title):
             row += 1
         
     
+    for i in range(2, row):
+        worksheet["G" + str(i)] = "=E" + str(i) + "*F" + str(i)
+
+
+
+    new_row = 2
+    while worksheet["H"+str(new_row)].value is not None:
+        print(worksheet["H"+str(new_row)])
+        new_row += 1
+
+    worksheet["H" + str(new_row)] = title
+
+    worksheet["I" + str(new_row)] = "=SUM(G2:G" + str(row) + ")"
+
+
+
 
     response = HttpResponse(content_type='application/vnd.ms-excel')
     response['Content-Disposition'] = 'attachment; filename="Data.xlsx"'
+
 
     # with NamedTemporaryFile() as tmp:
     #         workbook.save(tmp.name)

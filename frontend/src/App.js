@@ -61,6 +61,7 @@ function InputSection() {
         },
       });
       setResponseMessage(response.data.message); // Message from the backend
+      console.log("check");
     } catch (error) {
       setResponseMessage("Error uploading files.");
     }

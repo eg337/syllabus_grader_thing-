@@ -10,6 +10,7 @@ def parse_schedule(grades, file, name):
         for line in f:
             API_KEY = line.strip()
    
+   
 
     # name = 'CMSC470-Syllabus.pdf'
     # name = "syllabus_416_25.pdf"
