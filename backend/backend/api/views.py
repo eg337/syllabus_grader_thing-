@@ -45,13 +45,18 @@ class Create_Grade_Calc_View(APIView):
         serializer = self.serializer_class(data = request.data)
         if serializer.is_valid():
             #input_data = request.data.get('input_data')
-            input_file = request.FILES.get('input_file')
+            input_file = request.FILES.get('input_file1')
+            count = 0
             for key in request.FILES:
+                print("CHECKALLCAPS" + str(count) + "\n")
+                print(str(key) + "\n")
                 filename = request.FILES[key]._get_name()
+                print(filename)
                 input_file = request.FILES[key].file
                 print(request.FILES[key].content_type)
-
-            weights = generate_weights(input_file, filename)
+                count += 1
+            weights = generate_weights(input_file
+                                       , filename)
             deadline = parse_schedule(weights["grade weights"], input_file, filename)
             return write_calc(weights["grade weights"], deadline, weights["course title"])
 

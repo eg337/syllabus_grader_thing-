@@ -53,7 +53,7 @@ function InputSection() {
     for (let i = 0; i < files.length; i++) {
       formData.append('files', files[i]);
     }
-
+    console.log(files.length.toString()+"\n");
     try {
       const response = await axios.post('http://127.0.0.1:8000/api/create-grade-calc/', formData, {
         headers: {
